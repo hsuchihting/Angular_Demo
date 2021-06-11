@@ -1,0 +1,133 @@
+<div class="container-fluid">
+  <section>
+    <form [formGroup]="mainForm">
+      <div class="cardGroup">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">NAME</h5>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Enter your name"
+              formControlName="name"
+            />
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">GENDER</h5>
+            <input
+              class="input"
+              type="radio"
+              id="male"
+              name="gender"
+              value="male"
+              formControlName="gender"
+            />
+            <label class="inputText" for="male">Male</label>
+
+            <input
+              class="input"
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              formControlName="gender"
+            />
+            <label class="inputText" for="female">Female</label>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">LOCATION</h5>
+            <div class="search">
+              <input
+                type="text"
+                placeholder="Search name or location"
+                formControlName="location"
+                [(ngModel)]="search"
+              />
+              <button class="btn btn-warning" (click)="filterData()">
+                <i class="fas fa-search fa-lg"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-success"
+                (click)="submitData()"
+              >
+                修改
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+  <section>
+    <div class="table-responsive">
+      <table class="table table-hover table-bordered">
+        <thead class="table-indigo">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">NAME</th>
+            <th scope="col">GENDER</th>
+            <th scope="col">LOCATION</th>
+            <th scope="col">TIME</th>
+            <th scope="col">FEATURE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of lists">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.gender }}</td>
+            <td>{{ item.location }}</td>
+            <td>{{ today | date: "yyyy/MM/dd hh:mm:ss" }}</td>
+            <td class="feature">
+              <button
+                class="btn btn-secondary"
+                (click)="
+                  editData(item.id, item.name, item.gender, item.location)
+                "
+              >
+                編輯
+              </button>
+              <button class="btn btn-danger" (click)="deleteData(item.id)">
+                刪除
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="javascript:void" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="javascript:void">1</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void">2</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void">3</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void">4</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void">5</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void">6</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void">7</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void">8</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void">9</a></li>
+    <li class="page-item"><a class="page-link" href="javascript:void">10</a></li>
+    <li class="page-item">
+      <a class="page-link" href="javascript:void" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<!-- <a [routerLink]="['/main/main-child']" (click)="childRender()"
+  >顯示子頁面內容</a
+>
+<router-outlet></router-outlet> -->

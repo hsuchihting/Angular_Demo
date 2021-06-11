@@ -1,0 +1,93 @@
+.login-body {
+  background-color: white;
+  color: #495057;
+}
+
+.login-body .login-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.login-body .login-wrapper .login-panel {
+  width: 30%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 15px 90px;
+  background-image: linear-gradient(0deg, #4b0082 0%, #000 100%);
+
+  .login-avatar {
+    width: 150px;
+    height: 150px;
+    background-image: url("../../../assets/sakuragi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    margin: 5% 0;
+  }
+
+  .login-form,
+  .question {
+    color: #fff;
+  }
+  .login-form {
+    h2 {
+      margin-bottom: 5%;
+    }
+    p {
+      padding: 1% 0;
+    }
+    form {
+      label {
+        text-align: left;
+        p {
+          margin-bottom: 1%;
+        }
+        input {
+          display: block;
+          width: 100%;
+        }
+      }
+      .registered {
+        margin-top: 10%;
+        margin-bottom: 1%;
+        font-size: 8px;
+      }
+    }
+  }
+
+  .login-btn {
+    color: #ffffff;
+    background: #ff7214;
+    border: 1px solid #ff460e;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.5s, color 0.5s, border-color 0.2s,
+    box-shadow 0.2s;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    &:hover {
+      background: darken(#ff460e, 10%);
+    }
+  }
+}
+
+.login-body .login-wrapper .login-image {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-image: url("../../../assets/basketball.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

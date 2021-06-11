@@ -1,0 +1,46 @@
+<p-card header="表單練習" styleClass="layout-line">
+  <form [formGroup]="form">
+    <div class="ui-fluid">
+      <div class="p-field">
+        <label>
+          <span>formName</span>
+          <input type="text" pInputText formControlName="formName" />
+        </label>
+      </div>
+      <div class="p-field">
+        <label>
+          <span> firstName </span>
+          <input type="text" pInputText formControlName="firstName" />
+        </label>
+      </div>
+      <div class="p-field">
+        <label>
+          <span> lastName </span>
+          <input type="text" pInputText formControlName="lastName" />
+        </label>
+      </div>
+      <div formArrayName="nameArr">
+        <div
+          class="p-field"
+          *ngFor="let item of nameArr.controls; let i = index"
+          [formGroupName]="i"
+        >
+          <label>
+            <span> firstKidName </span>
+            <input type="text" pInputText formControlName="firstKidName" />
+          </label>
+
+          <br />
+          <label>
+            <span> secondKidName </span>
+            <input type="text" pInputText formControlName="secondKidName" />
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <p-button (click)="getFormValue()">動態取得表單的控制元件值 </p-button>
+  <p-button (click)="updateFormValue()">更新動態表單的控制元件值 </p-button>
+  <p-button (click)="resetForm()">重新設定表單</p-button>
+</p-card>

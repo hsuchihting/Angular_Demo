@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu {
+  display: flex;
+  background-color: indigo;
+  > li {
+    padding: 1%;
+    a {
+      color: #fff;
+    }
+    &:hover {
+      background-color: #ff7214;
+      transition: all 1s;
+    }
+  }
+}
+a {
+  text-decoration: none;
+}

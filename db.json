@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "name": "赤木剛憲",
+      "gender": "male",
+      "location": "臺北市",
+      "id": 1
+    },
+    {
+      "name": "赤木晴子",
+      "gender": "female",
+      "location": "臺北市",
+      "id": 2
+    },
+    {
+      "name": "宮城良田",
+      "gender": "male",
+      "location": "高雄市",
+      "id": 3
+    },
+    {
+      "name": "櫻木花道",
+      "gender": "male",
+      "location": "新北市",
+      "id": 4
+    },
+    {
+      "name": "流川楓",
+      "gender": "male",
+      "location": "宜蘭縣",
+      "id": 5
+    },
+    {
+      "name": "三井壽",
+      "gender": "male",
+      "location": "新竹市",
+      "id": 7
+    },
+    {
+      "name": "牧紳一",
+      "gender": "male",
+      "location": "高雄市",
+      "id": 8
+    },
+    {
+      "name": "清田信長",
+      "gender": "male",
+      "location": "高雄市",
+      "id": 9
+    },
+    {
+      "name": "仙道彰",
+      "gender": "male",
+      "location": "花蓮縣",
+      "id": 10
+    },
+    {
+      "name": "澤北榮志",
+      "gender": "male",
+      "location": "桃園市",
+      "id": 11
+    }
+  ]
+}

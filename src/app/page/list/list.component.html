@@ -1,0 +1,73 @@
+<div class="container">
+  <form [formGroup]="form">
+    <label>
+      <span>名稱：</span>
+      <input formControlName="name" type="text" />
+    </label>
+
+    <span>性別：</span>
+    <input
+      formControlName="gender"
+      class="input"
+      type="radio"
+      id="male"
+      name="gender"
+      value="male"
+    />
+    <label class="inputText" for="male">Male</label>
+    <input
+      class="input"
+      formControlName="gender"
+      type="radio"
+      id="female"
+      name="gender"
+      value="female"
+    />
+    <label class="inputText" for="female">Female</label>
+
+    <label
+      ><input
+        formControlName="location"
+        type="text"
+        placeholder="輸入縣市，EX:臺北市"
+    /></label>
+
+    <button type="button" class="btn btn-green" (click)="insertData()">
+      新增
+    </button>
+    <button type="button" class="btn btn-orange" (click)="submitData()">
+      修改
+    </button>
+  </form>
+  <label>
+    <input
+      class="filter"
+      type="text"
+      placeholder="搜尋想要找的名稱"
+      (keyup.enter)="filterData()"
+      [(ngModel)]="search"
+    />
+  </label>
+
+  <section>
+    <div class="title">
+      <h2>清單列表</h2>
+    </div>
+
+    <ul *ngFor="let item of lists">
+      <li>
+        <span> 名稱： {{ item.name }} </span>
+        <span> 性別：{{ item.gender }} </span>
+        <span> 縣市：{{ item.location }} </span>
+
+        <button
+          class="btn btn-orange"
+          (click)="editData(item.id, item.name, item.gender, item.location)"
+        >
+          編輯
+        </button>
+        <button class="btn btn-red" (click)="deleteData(item.id)">刪除</button>
+      </li>
+    </ul>
+  </section>
+</div>

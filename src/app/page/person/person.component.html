@@ -1,0 +1,26 @@
+<p-card header="API 操作練習" styleClass="layout-line">
+  <form [formGroup]="form">
+    <div formArrayName="personArr">
+      <div
+        *ngFor="let item of personArr.controls; let i = index"
+        [formGroupName]="i"
+      >
+        <div class="p-field">
+          <label>
+            <span>姓名</span>
+            <input type="text" pInputText formControlName="name"
+          /></label>
+        </div>
+
+        <div class="p-field">
+          <label>
+            <span>身高</span>
+            <input type="text" pInputText formControlName="height"
+          /></label>
+        </div>
+      </div>
+    </div>
+    <p-button (click)="getAllData()">取得所有資料</p-button>
+    <p-button (click)="getData()">取得一筆資料</p-button>
+  </form>
+</p-card>

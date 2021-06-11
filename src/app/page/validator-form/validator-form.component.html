@@ -1,0 +1,78 @@
+<p-card header="動態表單驗證">
+  <form [formGroup]="invalidForm">
+    <div class="p-fluid">
+      <div class="p-field">
+        <label>
+          <p>使用者名稱</p>
+          <input type="username" formControlName="name" pInputText />
+          <small
+            class="p-error"
+            *ngIf="
+              !invalidForm.controls.name.pristine &&
+              invalidForm.controls.name.errors?.required
+            "
+            >請填寫姓名</small
+          >
+        </label>
+      </div>
+
+      <div class="p-field">
+        <label>
+          <p>使用者電話</p>
+          <input type="text" formControlName="phone" pInputText />
+
+          <small
+            class="p-error"
+            *ngIf="
+              !invalidForm.controls.phone.pristine &&
+              invalidForm.controls.phone.errors?.required
+            "
+            >請輸入電話</small
+          >
+          <small
+            class="p-error"
+            *ngIf="
+              !invalidForm.controls.phone.pristine &&
+              invalidForm.controls.phone.hasError('maxlength')
+            "
+            >電話長度不可大於 10 碼</small
+          >
+          <small
+            class="p-error"
+            *ngIf="
+              !invalidForm.controls.phone.pristine &&
+              invalidForm.controls.phone.hasError('minlength')
+            "
+            >電話格式錯誤</small
+          >
+        </label>
+      </div>
+
+      <div class="p-field">
+        <label>
+          <p>使用者密碼</p>
+          <input type="text" formControlName="password" pInputText />
+          <small
+            class="p-error"
+            *ngIf="
+              !invalidForm.controls.password.pristine &&
+              invalidForm.controls.password.hasError('required')
+            "
+            >請輸入密碼</small
+          >
+          <small
+            class="p-error"
+            *ngIf="
+              !invalidForm.controls.password.pristine &&
+              invalidForm.controls.password.hasError('pattern')
+            "
+            >密碼格式錯誤：至少一個小寫字母，一個大寫字母，或是數字，密碼長度不得小於
+            8 個字元亦不可超過 16 字元</small
+          >
+        </label>
+      </div>
+    </div>
+  </form>
+
+  <p-button type="button" (click)="confirm()">確認</p-button>
+</p-card>
