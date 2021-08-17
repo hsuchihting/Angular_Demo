@@ -16,6 +16,7 @@ import { ValidatorFormComponent } from './page/validator-form/validator-form.com
 import { InputTextModule } from 'primeng/inputtext';
 import { FormComponent } from './page/form/form.component';
 import { ListComponent } from './page/list/list.component';
+import { TailwindcssComponent } from './page/tailwindcss/tailwindcss.component';
 // import {PaginatorModule} from 'primeng/paginator';
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ListComponent } from './page/list/list.component';
     PersonComponent,
     ListComponent,
     ValidatorFormComponent,
+    TailwindcssComponent,
   ],
   imports: [
     BrowserModule,

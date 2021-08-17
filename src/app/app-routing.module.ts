@@ -1,3 +1,4 @@
+import { TailwindcssComponent } from './page/tailwindcss/tailwindcss.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'validatorForm',
     component: ValidatorFormComponent,
+  },
+  {
+    path: 'tailwindcss',
+    component: TailwindcssComponent,
   },
   {
     path: '**',
