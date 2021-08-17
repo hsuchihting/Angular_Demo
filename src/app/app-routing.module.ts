@@ -1,3 +1,4 @@
+import { RxjsComponent } from './page/rxjs/rxjs.component';
 import { TailwindcssComponent } from './page/tailwindcss/tailwindcss.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: 'tailwindcss',
     component: TailwindcssComponent,
+  },
+  {
+    path: 'rxjs',
+    component: RxjsComponent,
   },
   {
     path: '**',
