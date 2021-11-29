@@ -1,0 +1,15 @@
+<p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Show">
+</p-button>
+<p-dialog header="Header" [(visible)]="displayModal" [modal]="true"
+  [style]="{width: '50%'}">
+  <p class="p-m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+    Deserunt aperiam officia dolore consequatur a incidunt cum quos
+    reprehenderit sunt voluptate, ducimus quo repellat amet doloremque officiis.
+    Ipsum sed ab fugiat?</p>
+  <ng-template pTemplate="footer">
+    <p-button icon="pi pi-check" (click)="displayModal=false" label="Yes"
+      class="p-button-text"></p-button>
+    <p-button icon="pi pi-times" (click)="displayModal=false" label="No">
+    </p-button>
+  </ng-template>
+</p-dialog>

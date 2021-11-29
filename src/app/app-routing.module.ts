@@ -1,3 +1,4 @@
+
 import { RxjsComponent } from './page/rxjs/rxjs.component';
 import { TailwindcssComponent } from './page/tailwindcss/tailwindcss.component';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,7 @@ import { MainChildComponent } from './page/main/main-child/main-child.component'
 import { ValidatorFormComponent } from './page/validator-form/validator-form.component';
 import { PersonComponent } from './page/person/person.component';
 import { LoginComponent } from './page/login/login.component';
+import { PrimengComponent } from './page/primeng/primeng.component';
 
 
 const routes: Routes = [
@@ -53,7 +55,7 @@ const routes: Routes = [
   },
   {
     path: 'primeng',
-    component: RxjsComponent,
+    component: PrimengComponent,
   },
   {
     path: '**',

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './page/main/main.component';
 import { MainChildComponent } from './page/main/main-child/main-child.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './page/login/login.component';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { DialogModule } from 'primeng/dialog';
 import { PersonComponent } from './page/person/person.component';
 import { ValidatorFormComponent } from './page/validator-form/validator-form.component';
 import { InputTextModule } from 'primeng/inputtext';
@@ -18,6 +19,7 @@ import { FormComponent } from './page/form/form.component';
 import { ListComponent } from './page/list/list.component';
 import { TailwindcssComponent } from './page/tailwindcss/tailwindcss.component';
 import { RxjsComponent } from './page/rxjs/rxjs.component';
+import { PrimengComponent } from './page/primeng/primeng.component';
 // import {PaginatorModule} from 'primeng/paginator';
 @NgModule({
   declarations: [
@@ -31,9 +33,11 @@ import { RxjsComponent } from './page/rxjs/rxjs.component';
     ValidatorFormComponent,
     TailwindcssComponent,
     RxjsComponent,
+    PrimengComponent,
   ],
   imports: [
     BrowserModule,
+
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -41,6 +45,8 @@ import { RxjsComponent } from './page/rxjs/rxjs.component';
     HttpClientModule,
     CardModule,
     InputTextModule,
+    DialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
