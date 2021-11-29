@@ -1,12 +1,6 @@
 {
   "posts": [
     {
-      "name": "赤木剛憲",
-      "gender": "male",
-      "location": "臺北市",
-      "id": 1
-    },
-    {
       "name": "赤木晴子",
       "gender": "female",
       "location": "臺北市",

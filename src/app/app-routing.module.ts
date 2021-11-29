@@ -52,6 +52,10 @@ const routes: Routes = [
     component: RxjsComponent,
   },
   {
+    path: 'primeng',
+    component: RxjsComponent,
+  },
+  {
     path: '**',
     redirectTo: 'login',
   },
