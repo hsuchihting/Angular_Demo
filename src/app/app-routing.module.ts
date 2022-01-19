@@ -1,3 +1,4 @@
+import { PipeComponent } from './page/pipe/pipe.component';
 
 import { RxjsComponent } from './page/rxjs/rxjs.component';
 import { TailwindcssComponent } from './page/tailwindcss/tailwindcss.component';
@@ -6,13 +7,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ListComponent } from './page/list/list.component';
 import { FormComponent } from './page/form/form.component';
-import { MainComponent } from "./page/main/main.component";
+import { MainComponent } from './page/main/main.component';
 import { MainChildComponent } from './page/main/main-child/main-child.component';
 import { ValidatorFormComponent } from './page/validator-form/validator-form.component';
 import { PersonComponent } from './page/person/person.component';
 import { LoginComponent } from './page/login/login.component';
 import { PrimengComponent } from './page/primeng/primeng.component';
-
 
 const routes: Routes = [
   {
@@ -56,6 +56,10 @@ const routes: Routes = [
   {
     path: 'primeng',
     component: PrimengComponent,
+  },
+  {
+    path: 'pipe',
+    component: PipeComponent,
   },
   {
     path: '**',

@@ -1,0 +1,29 @@
+<div class="p-3">
+  <h1 class="py-2 text-purple-500 tracking-wide">使用 Pipe 成為共用管道轉成「千分位數」</h1>
+  <p>當超過 1000 就加上逗號區隔，若沒有就顯示原本的數值</p>
+
+  <table class=" border-2 border-purple-700 w-full">
+    <thead class=" bg-purple-700 text-white">
+      <tr>
+        <th class="py-2 px-4 text-center">品項</th>
+        <th class="py-2 px-4 text-center">價格</th>
+        <th class="py-2 px-4 text-center">品項</th>
+        <th class="py-2 px-4 text-center">價格</th>
+        <th class="py-2 px-4 text-center">品項</th>
+        <th class="py-2 px-4 text-center">價格</th>
+        <th class="py-2 px-4 text-center">品項</th>
+        <th class="py-2 px-4 text-center">價格</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <ng-container *ngFor="let item of data">
+          <td class="py-2 px-4 text-center border-purple-700 border-2 ">
+            {{item.name}}</td>
+          <td class="px-4 py-2 text-center border-purple-700 border-2">
+            {{item.price | toThousandPipe}}</td>
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>
+</div>

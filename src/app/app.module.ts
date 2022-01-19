@@ -20,6 +20,8 @@ import { ListComponent } from './page/list/list.component';
 import { TailwindcssComponent } from './page/tailwindcss/tailwindcss.component';
 import { RxjsComponent } from './page/rxjs/rxjs.component';
 import { PrimengComponent } from './page/primeng/primeng.component';
+import { PipeComponent } from './page/pipe/pipe.component';
+import { toThousandPipe } from './pipe/toThoudsand.pipe';
 // import {PaginatorModule} from 'primeng/paginator';
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { PrimengComponent } from './page/primeng/primeng.component';
     TailwindcssComponent,
     RxjsComponent,
     PrimengComponent,
+    PipeComponent,
+    toThousandPipe
   ],
   imports: [
     BrowserModule,
