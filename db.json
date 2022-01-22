@@ -1,15 +1,9 @@
 {
   "posts": [
     {
-      "name": "赤木剛憲",
-      "gender": "male",
-      "location": "臺北市",
-      "id": 1
-    },
-    {
-      "name": "赤木晴子",
+      "name": "彌豆子",
       "gender": "female",
-      "location": "臺北市",
+      "location": "日本國",
       "id": 2
     },
     {
@@ -59,6 +53,12 @@
       "gender": "male",
       "location": "桃園市",
       "id": 11
+    },
+    {
+      "name": "赤木晴子",
+      "gender": "female",
+      "location": "臺北市",
+      "id": 12
     }
   ]
 }
