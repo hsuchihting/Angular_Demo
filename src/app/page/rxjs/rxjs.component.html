@@ -1,1 +1,31 @@
-<p>rxjs works!</p>
+<div class="container pt-4">
+  <h2>下拉選單使用 Rxjs:range 完成信用卡有效日期選項</h2>
+
+  <label>信用卡有效期限：</label>
+  <div class="creditCard">
+    <div class="drop">
+      <div class="dropOption">
+        <span>{{ monthValue ? monthValue : "有效月份" }}</span>
+      </div>
+
+      <ul class="dropdown">
+        <ng-container *ngFor="let item of creditMonth">
+          <li (click)="checkMonth(item)">{{ item }}</li>
+        </ng-container>
+      </ul>
+    </div>
+    <span>/</span>
+
+    <div class="drop">
+      <div class="dropOption">
+        <span>{{ yearValue ? yearValue : "有效年份" }} </span>
+      </div>
+
+      <ul class="dropdown">
+        <ng-container *ngFor="let item of creditYear">
+          <li (click)="checkYear(item)">{{ item }}</li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</div>
